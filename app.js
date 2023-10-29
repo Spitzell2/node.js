@@ -17,6 +17,7 @@ app.get('/consultar', async (req, res) => {
     try {
         // Realiza una consulta a la base de datos
         const result = await db.any('SELECT * FROM mytable');
+        console.log(result);
         res.json(result);
     } catch (error) {
         console.error('Error al realizar la consulta:', error);
